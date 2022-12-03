@@ -18,4 +18,11 @@
             </div>
         {% endfor %}
     </div>
+    <div>
+        {% for page in max_page %}
+            <а href="/posts/?page={{ page }}{% if hashtag_id %}&hashtag_id={{ hashtag_id }}{% endif %}{% if search_text %}&search={{ search_text }}{% endif%}">
+                <button style="width: 25px; height: 25px">{{ page }}</button>
+            </а>
+        {% endfor %}
+    </div>
 {% endblock %}
